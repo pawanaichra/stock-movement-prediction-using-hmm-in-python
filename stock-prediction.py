@@ -136,7 +136,7 @@ def get_stock_prices(company_symbol, start_date, end_date):
         
 def get_price_movements(stock_prices):
 	price_change = stock_prices[1:] - stock_prices[:-1]
-	price_movement = np.array(list(map(lambda x: 1 if x>0 else 0, price_change)))
+	price_movement = np.array(list(map((lambda x: 1 if x>0 else 0), price_change)))
 	return price_movement
 
 if __name__ == '__main__':
