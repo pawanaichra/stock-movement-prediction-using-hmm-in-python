@@ -13,6 +13,8 @@ def home():
 def predict():
   try:
     stock = request.args.get('stock', '')
+    if not stock:
+      return render_template('home.html')
     return stock_prediction_func(stock)
   except Exception as err:
     print(err)
