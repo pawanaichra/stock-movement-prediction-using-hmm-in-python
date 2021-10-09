@@ -1,5 +1,5 @@
 import json
-import HMM
+from HMM import HMM
 from utils import *
 
 def lambda_handler(event, context):
